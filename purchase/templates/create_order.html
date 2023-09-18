@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}{% endblock head_title %}
+{% block content %}
+
+    <!--    Навбар-->
+    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark p-4">
+            <h5 class="text-body-emphasis h4"><a href="http://127.0.0.1:8000/mr_cake/" style="color: white">Категорії</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="http://127.0.0.1:8000/mr_cake/order_cake" style="color: white">Замовити</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="http://127.0.0.1:8000/mr_cake/" style="color: white">Про нас</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="http://127.0.0.1:8000/mr_cake/cake_filling/" style="color: white">Начинки</a></h5>
+        </div>
+    </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    <hr>
+    <!--    Формочка-Замовлення-->
+    <center>
+        <div class="col-sm-9">
+             <div class="text-рамка" style="border: #cbb3b3 10px solid; padding: 10px;">
+                  <h2 style="color:  #555555;"><form action="" method="POST" enctype="multipart/form-data" class="needs-validation" style="text-align: center;">
+                       {% csrf_token %}
+                       {{ form.as_p }}
+                       <input type="submit" value="Оформити замовлення" class="btn btn-outline-dark">
+                       </form></h2></div>
+                </div>
+    </center>
+
+
+
+
+
+{% endblock content %}

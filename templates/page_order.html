@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}Як замовити{% endblock head_title %}
+{% block content %}
+
+        <!--        Навбар-->
+        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark p-4">
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/" style="color: white">Категорії</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/order_cake/" style="color: white">Замовити</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/page_company/" style="color: white">Про нас</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/cake_filling/" style="color: white">Начинки</a></h5>
+        </div>
+    </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav><br>
+
+        <!--        Інформація даної сторінки-->
+        <h1 style="color: #555555"><center><i>Як замовити?</i></center></h1>
+        <br>
+        <div style="text-align: center;">
+            <h3><b>1. Вибрати начинку</b></h3>
+            <h5>Начинки для тортів можна переглянути на  цій сторінці .Обов'язково врахувати при цьому, чи немає у когось із Ваших гостей алергії (мед, шоколад, фрукти, ягоди тощо)</h5>
+            <br><h3><b>2. Визначитись з оформленням торта</b></h3>
+            <h5>Майте на увазі, що при різній начинці, торти однієї і тієї ж форми матимуть різну вагу.
+            Наприклад, медовик важчий за бісквіт, вершковий крем легше сирно-вершкового.
+            Також враховуйте додаткові інгредієнти - горіхи, фрукти, ягоди, просочення.
+            Щоб уникнути непорозумінь, будь ласка, повідомте бажаний колір оформлення та декору, його розташування, додаткові деталі, не розташовані на зразку (напис і т.д.)
+            Якщо немає ескізу, але є якась ідея, повідомте про обов'язкові деталі, а краще, якщо знайдете подібні деталі, нехай і на кількох фото.
+            Якщо деталі чітко не обумовлені, їх колір, розмір, розташування буде виконано на наш розсуд.</h5>
+            <br><h3><b>3. Зателефонувати або написати нам, вже для того, щоб зробити замовлення</b></h3>
+            <h5>Обов'язково обумовити умови внесення передоплати.</h5>
+            <br><h3><b>4.Підтвердити замовлення</b></h3>
+            <h5>Оскільки ми працюємо за передоплатою, то для підтвердження свого замовлення Вам потрібно внести передоплату.</h5>
+            <br><h3><b>5. Забрати торт у заздалегідь обумовлений час, сплативши залишок суми за торт</b></h3>
+            <h5>Ми рекомендуємо робити замовлення не пізніше ніж за 3 дні до свята.</h5>
+            <br>
+            <button type="button" class="btn btn-outline-dark"><a href="/purchase/" style="color: black">Перейти до замовлення</a></button>
+        </div>
+{% endblock content %}
+

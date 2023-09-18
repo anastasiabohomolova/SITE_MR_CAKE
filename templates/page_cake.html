@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}{{ title }}{% endblock head_title %}
+{% block content %}
+
+
+    <!--    Навбар-->
+    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark" style="max-width: 100%; max-height: 100%;">
+            <div class="bg-dark p-4">
+                <!--                Пошук товару даної категорії-->
+                 <form action="" method="GET" style="margin-bottom: 10px">-->
+                    <input type="text" name="q" placeholder="Search" value="{{ request.GET.q }}">
+                    <input type="submit" value="Search object">
+                </form><br>
+                <h5 class="text-body-emphasis h4"><a href="/mr_cake/" style="color: white">Категорії</a></h5>
+                <h5 class="text-body-emphasis h4"><a href="/mr_cake/order_cake/" style="color: white">Замовити</a></h5>
+                <h5 class="text-body-emphasis h4"><a href="/mr_cake/page_company/" style="color: white">Про нас</a></h5>
+                <h5 class="text-body-emphasis h4"><a href="/mr_cake/cake_filling/" style="color: white">Начинки</a></h5>
+            </div>
+        </div>
+            <nav class="navbar navbar-dark bg-dark" style="max-width: 100%; max-height: 100%;">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        <hr>
+    <!--    Назва даної категорії-->
+    <h1 style="color: #555555"><i>{{ title }}</i></h1><br>
+    <!--    Карточка товару/товарів-->
+    <div class="container">
+        <div class="list">
+            {% for object in objects_list %}
+                <div class="card" style="background-color: #ce9b9b">
+                    {% if object.image %}
+                        <a href="{{ object.get_detail_url }}" >
+                            <img src="{{ object.image.url }}" alt="Image" width="400" height="400" class="card_img"></a>
+                    {% endif %}
+                    <div class="cart_body">
+                        <div class="card_title" style="background-color: #ce9b9b">
+                            <a href="{{ object.get_detail_url }}" style="color: #757070"><h3>{{ object.name }}</h3></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <hr>
+    <!--    Пагінація сторінки-->
+        <nav aria-label="Пример навигации по страницам">
+            <ul class="pagination justify-content-center">
+                <li class="page-link"  style="background-color: rgb(121,118,118)">
+                    {% if objects_list.has_previous %}
+                        <a href="?{{ page_request_var }}={{ objects_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"  style="color: black">Попередня сторінка</a>
+                    {% endif %}
+
+                <li class="page-link" style="background-color: rgb(121,118,118)">
+                    <span class="current"  style="color: black">
+                    Page {{ objects_list.number }} of {{ objects_list.paginator.num_pages }}
+                    </span>
+
+                <li class="page-link" style="background-color: rgb(121,118,118)">
+                    {% if objects_list.has_next %}
+                        <a href="?{{ page_request_var }}={{ objects_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"  style="color: black">Наступна сторінка</a>
+                    {% endif %}
+                </li>
+                </li>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

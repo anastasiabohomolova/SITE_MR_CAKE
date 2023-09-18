@@ -1,0 +1,97 @@
+/*Карточка товару*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+.card_img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.card_body{
+    padding: 40px;
+    background-color: #ce9b9b;
+}
+.card{
+    background-color: #ce9b9b;
+}
+.card_title{
+    padding: 30px;
+    margin: 0;
+    background-color: #ce9b9b;
+
+}
+/*Колонки для карточок*/
+.list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 500px) {
+    .list{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*Для сторінки з категоріями*/
+.card-body{
+    background-color: #fff6e5;
+
+}
+/*Іконки*/
+.bi-facebook{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.bi-instagram{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.bi-telegram{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+/*Лого та інша інформація*/
+.text{
+    margin-top: -25px;
+    margin-bottom: 25px;
+}
+.text2{
+    margin-bottom: 3px;
+    margin-top: 20px;
+}
+/*Колір іконок*/
+.bi-facebook {
+   fill: #505050;
+
+    }
+.bi-instagram{
+    fill: #505050;
+}
+.bi-telegram{
+    fill: #505050;
+}
+/*Відступи лого*/
+.logo{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/*Рамка*/
+/*.img-рамка {*/
+/*    border: #fffdd1 10px solid;*/
+/*    padding: 1px;"*/
+/*}*/
+
+

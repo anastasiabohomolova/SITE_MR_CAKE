@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %} Про нас {% endblock head_title %}
+{% block content %}
+
+        <!--        Навбар-->
+        <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark p-4">
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/" style="color: white">Категорії</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/order_cake/" style="color: white">Замовити</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/page_company/" style="color: white">Про нас</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/cake_filling/" style="color: white">Начинки</a></h5>
+        </div>
+    </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    <hr>
+    <!--    Інформація даної сторінки-->
+    <h1 style="color: #555555"><i>Про нас</i></h1><br>
+        <font>
+            <b><i>Mr_Cake</i></b> - мережа кондитерських, яка працює по всій Україні вже 5 років.<br>
+            Наша команда складається з найкращих кондитерів нашої країни, які втілюють різні
+            ідеї в справжнє мистецтво, що є не тільки естетично-гарними, а йще нереально смачними.<br>
+            Ми обожнюємо задовольняти наших покупців, тому працюємо на високому рівні.<br>
+            Щоб переглянути більше робіт, перейдіть в <a href="/mr_cake/" style="color: black"><b>Категорії.</b></a><br>
+            Оформити замовлення можна <a href="/purchase/" style="color: black"><b>тут.</b></a>
+        </font>
+
+
+
+
+{% endblock content %}

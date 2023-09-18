@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head_title %}Начинки{% endblock head_title %}
+{% block content %}
+
+    <!--    Навбар-->
+    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark p-4">
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/" style="color: white">Категорії</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/order_cake/" style="color: white">Замовити</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/page_company/" style="color: white">Про нас</a></h5>
+            <h5 class="text-body-emphasis h4"><a href="/mr_cake/cake_filling/" style="color: white">Начинки</a></h5>
+        </div>
+    </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav><br>
+
+    <!--    Інформація даної сторінки-->
+    <h1 style="color: #555555"><center><i>Начинки</i></center></h1><br>
+
+    <!--   Для начинок тортів/кейк-попсів-->
+    <center><h3><big style="color: #797676">Для тортів/кейк-попсів</big></h3></center><br>
+    {% for object in objects_list_cake %}
+        <div style="text-align: center;">
+            <p><h2><b>{{ object.name}}</b></h2></p>
+            <p></p><h3><i>{{ object.description }}</i></h3></p>
+            <br>
+            {% if object.image %}
+                <img src="{{ object.image.url }}"  alt="Image"  style="max-width: 100%; max-height: 100%;">
+            {% endif %}
+            <br>
+            <br>
+        </div>
+    {% endfor %}
+    <br>
+    <br>
+    <!--    Для начинок макарунів-->
+    <center><h3><big style="color: #797676">Для макарунів</big></h3></center><br>
+    {% for object in objects_list_macaroons %}
+        <div style="text-align: center;">
+            <p><h2><b>{{ object.name}}</b></h2></p>
+            <p></p><h3><i>{{ object.description }}</i></h3></p>
+            <br>
+            {% if object.image %}
+                <img src="{{ object.image.url }}"  alt="Image"  style="max-width: 100%; max-height: 100%;">
+            {% endif %}
+            <br>
+            <br>
+        </div>
+    {% endfor %}
+
+
+
+{% endblock content %}
